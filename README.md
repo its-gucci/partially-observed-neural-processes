@@ -1,1 +1,1 @@
-# patially-observed-neural-processes
+# partially-observed-neural-processes
