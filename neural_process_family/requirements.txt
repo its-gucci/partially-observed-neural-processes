@@ -1,0 +1,10 @@
+skorch==0.8 # use the correct skorch version if you want to use the pretrained models
+torch
+torchvision
+matplotlib
+tqdm
+scikit-learn
+joblib
+h5py
+seaborn
+scikit-image
