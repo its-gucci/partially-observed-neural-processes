@@ -18,6 +18,12 @@ Code for reproducing the experiments in the [paper](https://arxiv.org/pdf/2309.0
 
 Create a directory named `data` and download the CT scan data from [this link](https://drive.google.com/drive/folders/1SVHKRQXiRb98q4KHVEbj8eoWxjNS2QLW) and put it into the `data` folder.   
 
+## Experiments
+
+In `2D_CT_Recon.ipynb`, we provide an example of how our AttnLNP model for 2D CT Reconstruction was trained and evaluated. 
+
+## Acknowledgements
+
 Our implementation leverages the [Neural Process Family repository](https://github.com/YannDubs/Neural-Process-Family):
 ```
 @misc{dubois2020npf,
