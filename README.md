@@ -20,7 +20,7 @@ Create a directory named `data` and download the CT scan data from [this link](h
 
 ## Experiments
 
-In `2D_CT_Recon.ipynb`, we provide an example of how our AttnLNP model for 2D CT Reconstruction was trained and evaluated. 
+In `2D_CT_Recon.ipynb`, we provide an example of how our AttnLNP model for 2D CT Reconstruction was trained and evaluated. A sample trained model is provided in the `saved_models` directory. 
 
 ## Acknowledgements
 
