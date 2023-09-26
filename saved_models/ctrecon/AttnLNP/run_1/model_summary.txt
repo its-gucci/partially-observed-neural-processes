@@ -1,0 +1,82 @@
+AttnLNPFM(
+  (x_encoder): MLP(
+    (dropout): Identity()
+    (activation): ReLU()
+    (to_hidden): Linear(in_features=2, out_features=256, bias=True)
+    (linears): ModuleList()
+    (out): Linear(in_features=256, out_features=256, bias=True)
+  )
+  (decoder): MergeFlatInputs(
+    (resizer): MLP(
+      (dropout): Identity()
+      (activation): ReLU()
+      (to_hidden): Linear(in_features=256, out_features=256, bias=True)
+      (linears): ModuleList()
+      (out): Linear(in_features=256, out_features=256, bias=True)
+    )
+    (flat_module): CTReconModel(
+      (net): Sequential(
+        (0): Linear(in_features=256, out_features=256, bias=True)
+        (1): ReLU()
+        (2): Linear(in_features=256, out_features=256, bias=True)
+        (3): ReLU()
+        (4): Linear(in_features=256, out_features=256, bias=True)
+        (5): ReLU()
+        (6): Linear(in_features=256, out_features=512, bias=True)
+        (7): ReLU()
+      )
+    )
+  )
+  (p_y_loc_transformer): loc_transformer(
+    (linear): Linear(in_features=256, out_features=1, bias=True)
+    (activation): Sigmoid()
+  )
+  (p_y_scale_transformer): scale_transformer(
+    (linear): Linear(in_features=256, out_features=1, bias=True)
+    (activation): Sigmoid()
+  )
+  (xy_encoder): MergeFlatInputs(
+    (resizer): MLP(
+      (dropout): Identity()
+      (activation): ReLU()
+      (to_hidden): Linear(in_features=256, out_features=256, bias=True)
+      (linears): ModuleList()
+      (out): Linear(in_features=256, out_features=256, bias=True)
+    )
+    (flat_module): MLP(
+      (dropout): Identity()
+      (activation): ReLU()
+      (to_hidden): Linear(in_features=256, out_features=512, bias=True)
+      (linears): ModuleList(
+        (0): Linear(in_features=512, out_features=512, bias=True)
+      )
+      (out): Linear(in_features=512, out_features=256, bias=True)
+    )
+  )
+  (attender): TransformerAttender(
+    (key_transform): Linear(in_features=256, out_features=256, bias=False)
+    (query_transform): Linear(in_features=256, out_features=256, bias=True)
+    (value_transform): Linear(in_features=256, out_features=256, bias=False)
+    (dot): DotAttender(
+      (dropout): Identity()
+    )
+    (layer_norm1): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (layer_norm2): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (mlp): MLP(
+      (dropout): Identity()
+      (activation): ReLU()
+      (to_hidden): Linear(in_features=256, out_features=256, bias=True)
+      (linears): ModuleList()
+      (out): Linear(in_features=256, out_features=256, bias=True)
+    )
+  )
+  (latent_encoder): MLP(
+    (dropout): Identity()
+    (activation): ReLU()
+    (to_hidden): Linear(in_features=256, out_features=256, bias=True)
+    (linears): ModuleList()
+    (out): Linear(in_features=256, out_features=512, bias=True)
+  )
+  (r_z_merger): Linear(in_features=512, out_features=256, bias=True)
+  (q_z_loc_transformer): Identity()
+)
