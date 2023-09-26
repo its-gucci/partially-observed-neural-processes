@@ -1,6 +1,6 @@
-# partially-observed-neural-processes
+# [Generalizable Neural Fields as Partially Observed Neural Processes](https://its-gucci.github.io/ponp/)
 
-Code for reproducing the experiments in the paper:
+Code for reproducing the experiments in the [paper](https://arxiv.org/pdf/2309.06660.pdf):
 ```
 @article{gu2023generalizable,
   title={Generalizable Neural Fields as Partially Observed Neural Processes},
