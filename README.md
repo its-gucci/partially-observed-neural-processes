@@ -2,10 +2,11 @@
 
 Code for reproducing the experiments in the [paper](https://arxiv.org/pdf/2309.06660.pdf):
 ```
-@article{gu2023generalizable,
+@inproceedings{gu2023generalizable,
   title={Generalizable Neural Fields as Partially Observed Neural Processes},
   author={Gu, Jeffrey and Wang, Kuan-Chieh and Yeung, Serena},
-  journal={arXiv preprint arXiv:2309.06660},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={5330--5339},
   year={2023}
 }
 ```
